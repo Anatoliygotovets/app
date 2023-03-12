@@ -1,0 +1,28 @@
+fun main() {
+    println("Enter number")
+    fibonachi( readLine()?.toIntOrNull() ?: return)
+
+}
+
+fun fibonachi(index:Int){
+
+    while (index < 0) {
+        println("Please enter a value greater than zero")
+        return main()
+    }
+
+    var t1 = 0
+    var t2 = 1
+
+    for (n in 2..index) {
+
+        val sum = t1 + t2
+        t1 = t2
+        t2 = sum
+
+    }
+    print("Fibonachi - $t1")
+    println()
+    return main()
+
+}
